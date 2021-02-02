@@ -9,9 +9,10 @@ src/*.dll
 _install/
 build/
 
-# data/instances/**/*.txt
-# data/performance/
-data/
+data/features/
+data/instances/
+data/performances/
+data/models/
 
 reports/*cache/
 reports/*files/
