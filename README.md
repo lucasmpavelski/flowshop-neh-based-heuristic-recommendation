@@ -7,4 +7,4 @@ The command `docker-compose up` can be used to run the steps and create all mode
 
 The report with supplementary plots can be seen in the link:
 
-![https://htmlpreview.github.io/?https://github.com/lucasmpavelski/flowshop-neh-based-heuristic-recommendation/blob/main/reports/report.html]
+[View extra plots](https://htmlpreview.github.io/?https://github.com/lucasmpavelski/flowshop-neh-based-heuristic-recommendation/blob/main/reports/report.html)
