@@ -1,0 +1,18 @@
+# 1) Include the sources
+FIND_PACKAGE(GTest REQUIRED)
+INCLUDE_DIRECTORIES(${GTEST_INCLUDE_DIRS})
+
+INCLUDE_DIRECTORIES(${PARADISEO_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/src)
+
+ADD_EXECUTABLE(test-fsp test-fsp.cpp)
+ADD_EXECUTABLE(test-mh-params-specs test-mh-params-specs.cpp)
+
+ADD_DEFINITIONS(-DTEST_FIXTURES_FOLDER="${CMAKE_SOURCE_DIR}/test/")
+
+TARGET_LINK_LIBRARIES(test-fsp flowshop_solver_lib ${GTEST_LIBRARIES} ${PARADISEO_LIBRARIES})
+TARGET_LINK_LIBRARIES(test-mh-params-specs flowshop_solver_lib ${GTEST_LIBRARIES} ${PARADISEO_LIBRARIES} pthread)
+
+ADD_TEST(TestFSP test-fsp)
+ADD_TEST(TestMHParamsSpecs test-mh-params-specs)
+
