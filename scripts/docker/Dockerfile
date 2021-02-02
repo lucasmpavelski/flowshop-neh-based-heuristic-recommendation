@@ -45,6 +45,7 @@ RUN git clone --depth 1 -b master https://github.com/lucasmpavelski/paradiseo.gi
 
 RUN Rscript -e "install.packages(c('devtools'), dependencies = T)"
 RUN Rscript -e "install.packages(c('tidyverse'), dependencies = T)"
+RUN Rscript -e "install.packages(c('tidymodels'), dependencies = T)"
 RUN Rscript -e "install.packages(c('future', 'here', 'Rcpp', 'irace', 'optparse', 'furrr', 'progressr'), dependencies = T)"
 RUN Rscript -e "devtools::install_github('lucasmpavelski/schedulingInstancesGeneratoR')"
 RUN Rscript -e "devtools::install_github('lucasmpavelski/metaOpt')"
